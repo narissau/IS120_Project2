@@ -1,0 +1,52 @@
+:root {
+    --primary: #faca78 !important;
+    --secondary: #794a3a !important;
+    --tertiary: #68c7c1 !important;
+}
+
+.navbar {
+    background-color: var(--secondary);
+    font-family: "Righteous";
+    font-size: 2em;
+}
+
+.navbar-brand {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1em;
+}
+
+.nav-link {
+    color: var(--primary);
+}
+
+.movie-poster-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow:dense;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.movie-poster img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.poster-1 {
+    grid-column: 1 / span 2;
+    grid-row: span 1;
+}
+
+.poster-2{
+    grid-column: span 3;
+    grid-row: span 2;
+}
