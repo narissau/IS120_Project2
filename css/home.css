@@ -23,7 +23,7 @@
 
 .poster-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     background-color: var(--secondary);
 }
 
@@ -39,7 +39,7 @@ img {
 }
 
 .poster:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 @media screen and (max-width: 768px) {
