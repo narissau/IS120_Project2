@@ -29,12 +29,12 @@
 
 img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 96%;
 }
 
 .poster {
     margin: -22px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
     transition: ease 0.6s;
 }
 
@@ -47,3 +47,54 @@ img {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+
+body{
+    background-color: var(--primary);
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+.carousel-container{
+    position:relative;
+    overflow: hidden;
+    background-color: var(--primary);
+    height:60em;
+    padding: 5%;
+}
+
+.carousel{
+    width: 150vh;
+    height: 60vh;
+    background-color: var(--secondary);
+    color: var(--primary);
+    align-content: center;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.75);
+}
+
+.carousel-text {
+    text-align: center;
+}
+
+.stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, var(--primary), var(--primary) 20px, #f57f5b 20px, #f57f5b 30px, var(--tertiary) 30px, var(--tertiary) 40px);
+    animation: moveStripes 10s linear infinite;
+}
+
+@keyframes moveStripes {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
