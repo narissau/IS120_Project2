@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +20,15 @@
     <link rel="stylesheet" href="../css/home.css">
 
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" >Movie National Collective</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand">Movie National Collective</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -33,32 +36,93 @@
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                         <a class="nav-link" href="../html/news.html">News</a>
                     </div>
+                    <button class="nav-link ms-auto" id="loginButton">Log In / Sign Up</button>
                 </div>
             </div>
         </nav>
     </header>
-
-    <div class="poster-container">
-        <div class="poster poster-1"><img src="../images/avengers.jpg" alt="Movie Poster 1"></div>
-        <div class="poster poster-2"><img src="../images/fightClub.jpg" alt="Movie Poster 2"></div>
-        <div class="poster poster-3"><img src="../images/citizenKane.jpg" alt="Movie Poster 3"></div>
-        <div class="poster poster-4"><img src="../images/darkKnight.jpg" alt="Movie Poster 4"></div>
-        <div class="poster poster-5"><img src="../images/dieHard.jpg" alt="Movie Poster 5"></div>
-        <div class="poster poster-6"><img src="../images/ferrisBueller.jpg" alt="Movie Poster 6"></div>
-        <div class="poster poster-7"><img src="../images/gladiator.jpg" alt="Movie Poster 1"></div>
-        <div class="poster poster-8"><img src="../images/inception.jpg" alt="Movie Poster 2"></div>
-        <div class="poster poster-9"><img src="../images/interstellar.jpg" alt="Movie Poster 3"></div>
-        <div class="poster poster-10"><img src="../images/jaws.jpg" alt="Movie Poster 4"></div>
-        <div class="poster poster-11"><img src="../images/jurassicPark.jpg" alt="Movie Poster 5"></div>
-        <div class="poster poster-12"><img src="../images/lordOfTheRings.jpg" alt="Movie Poster 6"></div>
-        <div class="poster poster-13"><img src="../images/Oz.jpg" alt="Movie Poster 4"></div>
-        <div class="poster poster-14"><img src="../images/thePrincessBride.jpg" alt="Movie Poster 5"></div>
-        <div class="poster poster-15"><img src="../images/theShining.jpg" alt="Movie Poster 6"></div>
-        <div class="poster poster-16"><img src="../images/silenceLambs.jpg" alt="Movie Poster 6"></div>
-        <div class="poster poster-15"><img src="../images/parasite.jpg" alt="Movie Poster 6"></div>
-        <div class="poster poster-16"><img src="../images/wonderfulLife.jpg" alt="Movie Poster 6"></div>
+    <div id="loginForm" style="display: none;">
+        <form>
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="passwordInput" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
     </div>
 
-    
+    <section>
+        <div class="poster-container">
+            <div class="poster poster-1"><img src="../images/avengers.jpg" alt="Movie Poster 1"></div>
+            <div class="poster poster-2"><img src="../images/fightClub.jpg" alt="Movie Poster 2"></div>
+            <div class="poster poster-3"><img src="../images/matrix.jpg" alt="Movie Poster 3"></div>
+            <div class="poster poster-4"><img src="../images/starWars.jpg" alt="Movie Poster 4"></div>
+            <div class="poster poster-5"><img src="../images/dieHard.jpg" alt="Movie Poster 5"></div>
+            <div class="poster poster-6"><img src="../images/ferrisBueller.jpg" alt="Movie Poster 6"></div>
+            <div class="poster poster-7"><img src="../images/theBreakfastClub.jpg" alt="Movie Poster 7"></div>
+            <div class="poster poster-8"><img src="../images/inception.jpg" alt="Movie Poster 8"></div>
+            <div class="poster poster-9"><img src="../images/casablanca.jpg" alt="Movie Poster 9"></div>
+            <div class="poster poster-10"><img src="../images/shawshank.jpg" alt="Movie Poster 10"></div>
+            <div class="poster poster-11"><img src="../images/jurassicPark.jpg" alt="Movie Poster 11"></div>
+            <div class="poster poster-12"><img src="../images/lordOfTheRings.jpg" alt="Movie Poster 12"></div>
+            <div class="poster poster-13"><img src="../images/Oz.jpg" alt="Movie Poster 13"></div>
+            <div class="poster poster-14"><img src="../images/raiders.jpg" alt="Movie Poster 14"></div>
+            <div class="poster poster-15"><img src="../images/theGodfather.jpg" alt="Movie Poster 15"></div>
+            <div class="poster poster-16"><img src="../images/silenceLambs.jpg" alt="Movie Poster 16"></div>
+            <div class="poster poster-17"><img src="../images/parasite.jpg" alt="Movie Poster 17"></div>
+            <div class="poster poster-18"><img src="../images/wonderfulLife.jpg" alt="Movie Poster 18"></div>
+        </div>
+
+    </section>
+    <section class="carousel-container">
+        <div class="stripes"></div>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-12">
+                    <div id="carousel" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-text">
+                                    <h2>Our Story</h2>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-text">
+                                    <h2>Our Story</h2>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-text">
+                                    <h2>Our Story</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/main.js"></script>
 </body>
+
 </html>
