@@ -89,7 +89,7 @@ body{
 
  #loginForm {
     position: fixed;
-    top: 50%
+    top: 50%;
     right:0;
     transform: translate(865%, -8%);
     background-color: var(--primary);
