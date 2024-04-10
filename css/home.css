@@ -89,9 +89,8 @@ body{
 
  #loginForm {
     position: fixed;
-    top: 50%;
-    right:0;
-    transform: translate(865%, -8%);
+    top: 10%;
+    right:1%;
     background-color: var(--primary);
     padding: 20px;
     z-index: 9999;
