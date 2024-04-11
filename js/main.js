@@ -22,4 +22,3 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 });
 
 // chatgpt helped me create this log in form:)
-
