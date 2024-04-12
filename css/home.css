@@ -133,3 +133,12 @@ h1{
     font-size: 2rem;
  }
 
+.funfacts-container{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary);
+    height: 60em;
+    padding: 5%;
+    align-content: center;
+}
+
