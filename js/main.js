@@ -13,6 +13,12 @@ document.getElementById("loginButton").addEventListener("click", function () {
 document.getElementById("loginForm").addEventListener("submit", function (event) {
     let loginForm = document.getElementById("loginForm");
     let overlay = document.getElementById("overlay");
-    loginForm.style.display = "none";
-    overlay.style.display = "none";
+    event.preventDefault();
+    setTimeout(function () {
+        loginForm.style.display = "none";
+        overlay.style.display = "none";
+        loginForm.submit();
+    }, 100); 
 });
+
+// chatgpt helped me create this log in form:)
