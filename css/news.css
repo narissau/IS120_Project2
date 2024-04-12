@@ -1,0 +1,39 @@
+:root {
+    --primary: #faca78 !important;
+    --secondary: #794a3a !important;
+    --tertiary: #68c7c1 !important;
+}
+
+.navbar {
+    background-color: var(--secondary);
+    font-family: "Righteous";
+    font-size: 2em;
+}
+
+.navbar-brand {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1em;
+}
+
+.nav-link {
+    color: var(--primary);
+}
+
+main {
+    height: auto;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../images/vhs-bg.jpg');
+    background-size: cover;
+}
+
+main div {
+    width: auto;
+    height: 800px;
+}
