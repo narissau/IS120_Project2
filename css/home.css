@@ -62,11 +62,12 @@ body{
     background-color: var(--primary);
     height:60em;
     padding: 5%;
+    align-content: center;
 }
 
 .carousel{
-    width: 150vh;
-    height: 60vh;
+    width: 100%;
+    height: 65vh;
     background-color: var(--secondary);
     color: var(--primary);
     align-content: center;
