@@ -1,7 +1,7 @@
 :root {
-    --primary: #faca78 !important;
-    --secondary: #794a3a !important;
-    --tertiary: #68c7c1 !important;
+    --primary: #faca78;
+    --secondary: #794a3a;
+    --tertiary: #68c7c1;
 }
 
 .navbar {
@@ -23,17 +23,33 @@
 
 main {
     height: auto;
-    width: auto;
-}
-
-.container {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    background-image: url('../images/vhs-bg.jpg');
-    background-size: cover;
 }
 
-main div {
-    width: auto;
-    height: 800px;
+.container-fluid {
+    background-image: url(../images/vhs-bg.jpg);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: "Righteous";
+}
+
+.box-1 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.box-2 {
+    grid-column: 3 / 6;
+    grid-row: 2 / 3;
+}
+
+.box-3 {
+    grid-column: 5 / 8;
+    grid-row: 3 / 4;
 }
