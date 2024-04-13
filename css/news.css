@@ -22,13 +22,34 @@
 }
 
 main {
-    height: auto;
+    height: 55vh;
     width: 100%;
-    display: flex;
+    /* display: flex; */
 }
 
-.container-fluid {
+.headline-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
     background-image: url(../images/vhs-bg.jpg);
+    background-position: center;
+}
+
+.bg-container {
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    height: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 2.5em;
 }
 
 .box {
@@ -37,19 +58,15 @@ main {
     align-items: center;
     padding: 10px;
     font-family: "Righteous";
+    height: 100px;
+    margin: 15px;
+    color:#faca78;
+    font-size: 4rem;
 }
 
-.box-1 {
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-}
-
-.box-2 {
-    grid-column: 3 / 6;
-    grid-row: 2 / 3;
-}
-
-.box-3 {
-    grid-column: 5 / 8;
-    grid-row: 3 / 4;
+.events-container {
+    background-image: url(../svgs/Retro\ Ribbon\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
 }
