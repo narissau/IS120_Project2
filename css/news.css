@@ -1,7 +1,7 @@
 :root {
-    --primary: #faca78 !important;
-    --secondary: #794a3a !important;
-    --tertiary: #68c7c1 !important;
+    --primary: #faca78;
+    --secondary: #794a3a;
+    --tertiary: #68c7c1;
 }
 
 .navbar {
@@ -22,18 +22,51 @@
 }
 
 main {
-    height: auto;
-    width: auto;
+    height: 55vh;
+    width: 100%;
+    /* display: flex; */
 }
 
-.container {
+.headline-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    align-content: center;
+    align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    background-image: url('../images/vhs-bg.jpg');
-    background-size: cover;
+    justify-content: space-around;
+    background-image: url(../images/vhs-bg.jpg);
+    background-position: center;
 }
 
-main div {
-    width: auto;
-    height: 800px;
+.bg-container {
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    height: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 2.5em;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: "Righteous";
+    height: 100px;
+    margin: 15px;
+    color:#faca78;
+    font-size: 4rem;
+}
+
+.events-container {
+    background-image: url(../svgs/Retro\ Ribbon\ 3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
 }
