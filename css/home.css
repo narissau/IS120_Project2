@@ -160,14 +160,14 @@ h1{
 
 
  #birth-year-table  tr:nth-child(even) {
-     background-color: var(--secondary);
-     color: white;
+     background-color: #e6d9a7;;
+     color: var(--secondary);
      font-size: larger;
  }
 
   #birth-year-table tr:nth-child(even):hover {
-      background-color: #e6d9a7;
-      color:var(--secondary);
+      background-color: var(--secondary);
+      color:var(--primary);
   }
 
 
@@ -198,22 +198,24 @@ h3{
  }
 
  tr:nth-child(even) {
-     background-color: #efe0b6;
-     color: #333;
+    background-color: #efe0b6;
+    color: var(--secondary);
+    transition: background-color 0.3s ease;
  }
 
  tr:nth-child(odd) {
-     background-color: #f9f3e4;
-     color: #333;
+    background-color: #f9f3e4;
+    color: var(--secondary);
+    transition: background-color 0.3s ease;
  }
 
  tr:hover {
-     background-color: #e6d9a7;
+    background-color: #e6d9a7;
  }
 
  th {
-     background-color: #cc9966;
-     color: #fff;
-     font-weight: bold;
-     text-transform: uppercase;
+    background-color: #cc9966;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
  }
