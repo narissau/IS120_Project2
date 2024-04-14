@@ -18,7 +18,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         loginForm.style.display = "none";
         overlay.style.display = "none";
         loginForm.submit();
-    }, 100); 
+    }, 100);
 });
 
 // chatgpt helped me create this log in form:)
@@ -44,7 +44,7 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
     .catch(error => console.error('Error fetching movie data:', error));
 
 
-    // making a table of top award-winning movies
+// making a table of top award-winning movies
 fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
     .then(response => response.json())
     .then(data => {
@@ -99,12 +99,12 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
             directorsCell.textContent = movie.directors;
             row.appendChild(directorsCell);
 
-            const awardNominationsCell = document.createElement('td'); 
-            awardNominationsCell.textContent = movie.awardNominations; 
+            const awardNominationsCell = document.createElement('td');
+            awardNominationsCell.textContent = movie.awardNominations;
             row.appendChild(awardNominationsCell);
 
-            const awardWinsCell = document.createElement('td'); 
-            awardWinsCell.textContent = movie.awardWins; 
+            const awardWinsCell = document.createElement('td');
+            awardWinsCell.textContent = movie.awardWins;
             row.appendChild(awardWinsCell);
 
             tableBody.appendChild(row);
@@ -117,7 +117,7 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
 
 
 
-    
+
 // movies released in your birth year table
 function getMoviesByYear() {
     console.log("Function getMoviesByYear() called.");
@@ -130,13 +130,17 @@ function getMoviesByYear() {
             movieSpan.textContent = '';
 
             if (data) {
-                const moviesReleasedInYear = data.filter(movie => {
-                    const releaseYear = new Date(movie.release_date).getFullYear().toString();
-                    return releaseYear === yearInput;
+                const moviesReleasedInYear = [];
+                Object.values(data).forEach(decade => {
+                    Object.values(decade).forEach(movie => {
+                        if (movie.release_date.startsWith(yearInput)) {
+                            moviesReleasedInYear.push(movie.title);
+                        }
+                    });
                 });
 
                 if (moviesReleasedInYear.length > 0) {
-                    const movieTitles = moviesReleasedInYear.map(movie => movie.title).join(', ');
+                    const movieTitles = moviesReleasedInYear.join(', ');
                     movieSpan.textContent = movieTitles;
                 } else {
                     movieSpan.textContent = 'No movies found for the specified year.';
