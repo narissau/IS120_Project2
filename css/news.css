@@ -42,26 +42,96 @@ main {
 }
 
 .bg-container {
-    background-color: white;
+    background-color:black;
     width: 100%;
-    align-items: center;
     height: 90%;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
     border-radius: 2.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
 }
 
 .box {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     padding: 10px;
     font-family: "Righteous";
-    height: 100px;
+    height: 90%;
     margin: 15px;
-    color:#faca78;
+    color:black;
     font-size: 4rem;
+}
+
+@keyframes spotlight {
+    0% {
+        background-color:#faca78;
+    }
+
+    33% {
+        background-color: black;
+    }
+
+    66% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: #faca78;
+    }
+}
+
+@keyframes spotlight-2 {
+    0% {
+        background-color: black;
+    }
+
+    33% {
+        background-color: #faca78;
+    }
+
+    66% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes spotlight-3 {
+    0% {
+        background-color: black;
+    }
+
+    33% {
+        background-color: black;
+    }
+
+    66% {
+        background-color: #faca78;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+.box-1 {
+    animation: spotlight 6s infinite;
+    border-radius: 2.5em;
+}
+
+.box-2 {
+    animation: spotlight-2 6s infinite;
+    border-radius: 2.5em;
+}
+
+.box-3 {
+    animation: spotlight-3 6s infinite;
+    border-radius: 2.5em;
 }
 
 .events-container {
