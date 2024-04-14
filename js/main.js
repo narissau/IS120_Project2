@@ -53,7 +53,7 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
         Object.keys(data).forEach(decade => {
             Object.keys(data[decade]).forEach(movie => {
                 const awardWins = data[decade][movie]["award_wins"];
-                if (awardWins > 80) {
+                if (awardWins > 90) {
                     moviesWithOver30Wins.push({
                         title: data[decade][movie]["title"],
                         releaseDate: data[decade][movie]["release_date"],
@@ -151,3 +151,4 @@ function getMoviesByYear() {
         })
         .catch(error => console.error('Error fetching movie data:', error));
 }
+

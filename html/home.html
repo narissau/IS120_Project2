@@ -132,34 +132,40 @@
         </div>
     </section>
 
-    <section class="table-container">
+    <section class="table-1-container">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6" id="best-ratings-container"></div>
-                <div class="col-md-6 align-content-center">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Question</th>
-                                <th>Input your birth year</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Want to see which movies were released during the same year you were born?</td>
-                                <td><input type="text" id="yearInput"></td>
-                                <td><button onclick="getMoviesByYear()">Click here</button></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">Movies: <span id="movieName"></span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-8" id="best-ratings-container"><h3>Top Award-Winning Movies</h3></div>
+                <div class="col-md-2"></div>
             </div>
         </div>
+    </section>
+    <section class="table-2-container justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" id="birth-year-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th>Input your birth year</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Want to see which movies were released during the year you were born?</td>
+                            <td><input type="text" id="yearInput"></td>
+                            <td><button onclick="getMoviesByYear()">Click here</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Movies: <span id="movieName"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3"></div>
     </section>
 
 
