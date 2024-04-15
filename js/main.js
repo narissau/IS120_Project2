@@ -25,6 +25,8 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
 
 
+
+
 fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
     .then(response => response.json())
     .then(data => {
