@@ -96,7 +96,7 @@ body{
     position: fixed;
     top: 10%;
     right:1%;
-    background-color: var(--primary);
+    background-color: #e6d9a7;
     padding: 20px;
     z-index: 9999;
     display: none;
@@ -140,7 +140,9 @@ h1{
     height: 80vh;
     padding: 5%;
     align-content: center;
+    justify-content: center;
 }
+
 
 .table-2-container{
     background-image: url(../svgs/Retro\ Ribbon\ 1.svg);
