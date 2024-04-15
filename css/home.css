@@ -133,10 +133,9 @@ h1{
     font-size: 2rem;
  }
 
-.table-1-container, .table-2-container{
+.table-1-container, .table-2-container, .form-container{
     position: relative;
     overflow: hidden;
-    background-color: var(--primary);
     height: 80vh;
     padding: 5%;
     align-content: center;
@@ -147,10 +146,15 @@ h1{
 .table-2-container{
     background-image: url(../svgs/Retro\ Ribbon\ 1.svg);
     background-size: cover;
+    background-color: var(--primary);
 }
 
 #best-ratings-container th{
     font-size: larger;
+}
+
+#best-ratings-container h3{
+    color: var(--primary);
 }
 
  #birth-year-table table {
@@ -159,7 +163,6 @@ h1{
     font-size: 1.5rem;
     margin: 0 auto;
  }
-
 
 
 #birth-year-table  tr:nth-child(even) {
@@ -193,7 +196,6 @@ h3{
      background-color: #f3e9d2;
      border: 2px solid #ccc;
      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-     margin:50px;
      font-size:large;
  }
 
@@ -227,3 +229,64 @@ h3{
     text-transform: uppercase;
  }
 
+
+
+
+
+ .video-background {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+ }
+
+ .video-background iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: 0;
+ }
+
+ .content {
+     position: relative;
+     z-index: 1;
+     padding: 20px;
+ }
+
+ /* .table-1-container,
+ .table-2-container {
+     margin-bottom: 20px;
+     border-radius: 10px;
+     padding: 20px;
+ } */
+
+ /* .table-1-container h3,
+ .table-2-container h3 {
+     margin-top: 0;
+ } */
+
+ /* .container-fluid {
+     max-width: fit-content;
+     margin-right: auto;
+     margin-left: auto;
+ } */
+
+ @media (min-width: 576px) {
+     .container-fluid {
+         padding-right: 15px;
+         padding-left: 15px;
+     }
+ }
+
+
+.form-container h4{
+    font-family: "Righteous";
+    margin: 10px;
+    color: var(--secondary);
+}
+
+.form-container{
+    margin-bottom: 100px;
+}

@@ -55,7 +55,7 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
         Object.keys(data).forEach(decade => {
             Object.keys(data[decade]).forEach(movie => {
                 const awardWins = data[decade][movie]["award_wins"];
-                if (awardWins > 90) {
+                if (awardWins > 100) {
                     moviesWithOver30Wins.push({
                         title: data[decade][movie]["title"],
                         releaseDate: data[decade][movie]["release_date"],
@@ -154,3 +154,13 @@ function getMoviesByYear() {
         .catch(error => console.error('Error fetching movie data:', error));
 }
 
+
+function submitForm(event) {
+    // Prevent default form submission behavior
+    event.preventDefault();
+
+    // Scroll to the carousel section
+    document.getElementById('carousel').scrollIntoView({ behavior: 'smooth' });
+
+    // Additional logic to handle form submission
+}
