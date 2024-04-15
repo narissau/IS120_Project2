@@ -49,30 +49,63 @@
     </div>
 </div>
 <div class="events-container">
-    <h3>Find A Film!</h3>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Join Our Movie Lover's Newsletter</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Join!</button>
-                </div>
-            </div>
-        </div>
+<section class="left-section col-4">
+    <h3>Let's Find A Film!</h3>
+    <h4>Search By:</h4>
+<br>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Decade</label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">1980's</option>
+            <option value="2">1990's</option>
+            <option value="3">2000's</option>
+            <option value="3">2010's</option>
+        </select>
     </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Genre</label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="3">Action</option>
+            <option value="1">Adventure</option>
+            <option value="3">Animation</option>
+            <option value="3">Biography</option>
+            <option value="2">Comedy</option>
+            <option value="3">Crime</option>
+            <option value="3">Documentary</option>
+            <option value="3">Drama</option>
+            <option value="3">Family</option>
+            <option value="3">Fantasy</option>
+            <option value="3">History</option>
+            <option value="3">Horror</option>
+            <option value="3">Musical</option>
+            <option value="3">Mystery</option>
+            <option value="3">Romance</option>
+            <option value="3">Sci-Fi</option>
+            <option value="3">Sport</option>
+            <option value="3">Thriller</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Actor</span>
+        <input type="text" class="form-control" placeholder="First or Last Name" aria-label="First or Last Name"
+            aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Movie Title</span>
+        <input type="text" class="form-control" placeholder="Title" aria-label="Title"
+            aria-describedby="basic-addon1">
+    </div>
+</section>
+
+<section class="right-section col"></section>
 </div>
 
 <section class="randomizer">
 <h3>Still Can't Decide?</h3>
-<button class="btn random">Randomize!</button>
+<button class="btn random" onclick="randomizer()">Randomize!</button>
 </section>
 </main>
 

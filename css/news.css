@@ -22,7 +22,7 @@
 }
 
 main {
-    height: 55vh;
+    height: 100vh;
     width: 100%;
     /* display: flex; */
 }
@@ -30,7 +30,7 @@ main {
 .headline-container {
     position: relative;
     overflow: hidden;
-    height: 100%;
+    height: 85%;
     width: 100%;
     padding: 5%;
     align-content: center;
@@ -43,8 +43,8 @@ main {
 
 .bg-container {
     background-color:black;
-    width: 100%;
-    height: 90%;
+    width: 80%;
+    height: 70%;
     border-radius: 2.5em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -139,4 +139,32 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+}
+
+.left-section {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    background-color: var(--primary) !important;
+}
+
+.right-section {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-family: "Righteous";
+    color:#794a3a;
+}
+
+.randomizer {
+    margin: 10px;
+    padding: 10px;
 }
