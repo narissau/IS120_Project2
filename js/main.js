@@ -1,7 +1,7 @@
 document.getElementById("loginButton").addEventListener("click", function () {
     let loginForm = document.getElementById("loginForm");
     let overlay = document.getElementById("overlay");
-    if (loginForm.style.display === "none") {
+    if (loginForm.style.display === "none" || loginForm.style.display === "") {
         loginForm.style.display = "block";
         overlay.style.display = "block";
     } else {
@@ -9,6 +9,7 @@ document.getElementById("loginButton").addEventListener("click", function () {
         overlay.style.display = "none";
     }
 });
+
 
 document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault(); 
@@ -27,30 +28,33 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 });
 
 
+// Function to toggle between light and dark mode
+function toggleMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
 
-// chatgpt helped me create this log in form:)
+document.getElementById("toggleModeButton").addEventListener("click", toggleMode);
 
 
 
+// fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
+//     .then(response => response.json())
+//     .then(data => {
+//         Object.keys(data).forEach(decade => {
 
+//             Object.keys(data[decade]).forEach(movie => {
 
-fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
-    .then(response => response.json())
-    .then(data => {
-        Object.keys(data).forEach(decade => {
+//                 const movieData = data[decade][movie];
 
-            Object.keys(data[decade]).forEach(movie => {
-
-                const movieData = data[decade][movie];
-
-                Object.keys(movieData).forEach(key => {
-                    const value = movieData[key];
-                    // console.log(`${key}:`, value);
-                });
-            });
-        });
-    })
-    .catch(error => console.error('Error fetching movie data:', error));
+//                 Object.keys(movieData).forEach(key => {
+//                     const value = movieData[key];
+//                     // console.log(`${key}:`, value);
+//                 });
+//             });
+//         });
+//     })
+//     .catch(error => console.error('Error fetching movie data:', error));
 
 
 // making a table of top award-winning movies
@@ -159,54 +163,47 @@ function getMoviesByYear() {
         .catch(error => console.error('Error fetching movie data:', error));
 }
 
-// function submitForm(event) {
-//     event.preventDefault();
-
-//     document.getElementById('carousel').scrollIntoView({ behavior: 'smooth' });
-
-// }
-
-
-// Function to toggle between light and dark mode
-function toggleMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-}
-
-document.getElementById("toggleModeButton").addEventListener("click", toggleMode);
-
-
 
 // animation on buttons
-document.getElementById("movieForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+const submitButton = document.getElementById("submitButton");
+const birthButton = document.getElementById("birthButton");
+const toggleModeButton = document.getElementById("toggleModeButton");
+// const openModalButton = document.getElementById("openModalButton");
+const loginButton = document.getElementById("loginButton");
 
-    document.getElementById("submitButton").classList.add("submit-animation");
-    this.classList.remove("submit-animation");
-    void this.offsetWidth; 
+submitButton.addEventListener("click", function () {
     this.classList.add("submit-animation");
+    setTimeout(() => {
+        this.classList.remove("submit-animation");
+    }, 1000); 
 });
 
-
-document.getElementById("birthButton").addEventListener("click", function () {
+birthButton.addEventListener("click", function () {
     this.classList.add("submit-animation");
-    this.classList.remove("submit-animation");
-    void this.offsetWidth; 
-    this.classList.add("submit-animation");
+    setTimeout(() => {
+        this.classList.remove("submit-animation");
+    }, 1000); 
 });
 
-document.getElementById("toggleModeButton").addEventListener("click", function () {
+toggleModeButton.addEventListener("click", function () {
     this.classList.add("submit-animation");
-    this.classList.remove("submit-animation");
-    void this.offsetWidth; 
-    this.classList.add("submit-animation");
+    setTimeout(() => {
+        this.classList.remove("submit-animation");
+    }, 1000); 
 });
 
-document.getElementById("openModalButton").addEventListener("click", function () {
+// openModalButton.addEventListener("click", function () {
+//     this.classList.add("submit-animation");
+//     setTimeout(() => {
+//         this.classList.remove("submit-animation");
+//     }, 1000); 
+// });
+
+loginButton.addEventListener("click", function () {
     this.classList.add("submit-animation");
-    this.classList.remove("submit-animation");
-    void this.offsetWidth;
-    this.classList.add("submit-animation");
+    setTimeout(() => {
+        this.classList.remove("submit-animation");
+    }, 1000);
 });
 
 
@@ -223,7 +220,7 @@ async function getRandomMoviePlot() {
         const plot = data[randomEra][randomMovie].plot;
         const title = data[randomEra][randomMovie].title;
 
-        document.getElementById('movieTitle').innerText = title; // Set movie title in the modal
+        document.getElementById('movieTitle').innerText = title;
         document.getElementById('moviePlot').innerText = plot;
 
         modal.style.display = 'block';
@@ -232,28 +229,24 @@ async function getRandomMoviePlot() {
     }
 }
 
-// Function to get a random element from an array
 function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-// Get the modal element
 const modal = document.getElementById('myModal');
 
-// Get the <span> element that closes the modal
 const span = document.getElementsByClassName('close')[0];
 
-// Event listener for the button to open the modal
 document.getElementById('openModalButton').addEventListener('click', getRandomMoviePlot);
 
-// Event listener to close the modal when the <span> element (x) is clicked
 span.addEventListener('click', function () {
     modal.style.display = 'none';
 });
 
-// Event listener to close the modal when the user clicks outside of it
 window.addEventListener('click', function (event) {
     if (event.target === modal) {
         modal.style.display = 'none';
     }
 });
+
+
