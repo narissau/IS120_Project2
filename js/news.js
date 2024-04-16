@@ -7,7 +7,7 @@ function handleData(movieData) {
 }
 
 function MovieSearch(movieData) {
-
+    let inputData = 
 }
 
 function randomizer(radomMovieData) {
