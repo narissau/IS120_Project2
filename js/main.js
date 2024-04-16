@@ -159,12 +159,12 @@ function getMoviesByYear() {
         .catch(error => console.error('Error fetching movie data:', error));
 }
 
-function submitForm(event) {
-    event.preventDefault();
+// function submitForm(event) {
+//     event.preventDefault();
 
-    document.getElementById('carousel').scrollIntoView({ behavior: 'smooth' });
+//     document.getElementById('carousel').scrollIntoView({ behavior: 'smooth' });
 
-}
+// }
 
 
 // Function to toggle between light and dark mode
@@ -173,5 +173,31 @@ function toggleMode() {
     body.classList.toggle("dark-mode");
 }
 
-// Event listener for the toggle mode button
 document.getElementById("toggleModeButton").addEventListener("click", toggleMode);
+
+
+
+// animation on buttons
+document.getElementById("movieForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    document.getElementById("submitButton").classList.add("submit-animation");
+    this.classList.remove("submit-animation");
+    void this.offsetWidth; 
+    this.classList.add("submit-animation");
+});
+
+
+document.getElementById("birthButton").addEventListener("click", function () {
+    this.classList.add("submit-animation");
+    this.classList.remove("submit-animation");
+    void this.offsetWidth; 
+    this.classList.add("submit-animation");
+});
+
+document.getElementById("toggleModeButton").addEventListener("click", function () {
+    this.classList.add("submit-animation");
+    this.classList.remove("submit-animation");
+    void this.offsetWidth; 
+    this.classList.add("submit-animation");
+});

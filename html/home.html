@@ -159,7 +159,7 @@
                         <tr>
                             <td>Your birth year:</td>
                             <td><input type="text" id="yearInput"></td>
-                            <td><button onclick="getMoviesByYear()">Click here</button></td>
+                            <td><button onclick="getMoviesByYear()" id="birthButton">Click here</button></td>
                         </tr>
                         <tr>
                             <td colspan="3">Movies: <span id="movieName"></span></td>
@@ -170,7 +170,8 @@
             <div class="col-md-3"></div>
     </section>
 
-<section class="form-container" onsubmit="submitForm(event)">
+<section class="form-container">
+    <!-- onsubmit="submitForm(event) -->
     <div class="container">
         <h3>What are your top 3 favorite movies?</h3>
         <h4 class="text-center">Let us know so we can decide which movies to feature in our upcoming screenings, discussions, and events!</h4>
@@ -233,7 +234,7 @@
                 <input type="email" class="form-control" id="email" placeholder="Enter your email">
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" id="submitButton">Submit</button>
         </form>
     </div>
 </section>
