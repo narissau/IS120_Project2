@@ -201,3 +201,59 @@ document.getElementById("toggleModeButton").addEventListener("click", function (
     void this.offsetWidth; 
     this.classList.add("submit-animation");
 });
+
+document.getElementById("openModalButton").addEventListener("click", function () {
+    this.classList.add("submit-animation");
+    this.classList.remove("submit-animation");
+    void this.offsetWidth;
+    this.classList.add("submit-animation");
+});
+
+
+
+// Function to fetch a random movie plot and display it in the modal
+async function getRandomMoviePlot() {
+    try {
+        const response = await fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData');
+        const data = await response.json();
+
+        const randomEra = getRandomElement(Object.keys(data));
+        const randomMovie = getRandomElement(Object.keys(data[randomEra]));
+
+        const plot = data[randomEra][randomMovie].plot;
+        const title = data[randomEra][randomMovie].title;
+
+        document.getElementById('movieTitle').innerText = title; // Set movie title in the modal
+        document.getElementById('moviePlot').innerText = plot;
+
+        modal.style.display = 'block';
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Function to get a random element from an array
+function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+// Get the modal element
+const modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName('close')[0];
+
+// Event listener for the button to open the modal
+document.getElementById('openModalButton').addEventListener('click', getRandomMoviePlot);
+
+// Event listener to close the modal when the <span> element (x) is clicked
+span.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+// Event listener to close the modal when the user clicks outside of it
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});

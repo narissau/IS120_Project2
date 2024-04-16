@@ -330,6 +330,7 @@ button{
     border-radius: 0.2em;
     color: #794a3a;
     transition: background-color 0.3s ease;
+    font-family: "Righteous";
 }
 
 button:hover {
@@ -338,7 +339,6 @@ button:hover {
 }
 
 
-/* Define the animation for the submit button */
 @keyframes submitButtonAnimation {
     0% {
         transform: scale(1);
@@ -353,6 +353,54 @@ button:hover {
     }
 }
 
-.submit-animation {
-    animation: submitButtonAnimation 0.5s;
+
+/* modal styling */
+
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: var(--tertiary);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 100vh;
+    font-family: "Righteous";
+    text-align: center;
+    color: #794a3a;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
