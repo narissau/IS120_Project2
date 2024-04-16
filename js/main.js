@@ -1,6 +1,6 @@
 document.getElementById("loginButton").addEventListener("click", function () {
     let loginForm = document.getElementById("loginForm");
-    let overlay = document.querySelector(".overlay");
+    let overlay = document.getElementById("overlay");
     if (loginForm.style.display === "none") {
         loginForm.style.display = "block";
         overlay.style.display = "block";
@@ -11,17 +11,26 @@ document.getElementById("loginButton").addEventListener("click", function () {
 });
 
 document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    alert("Username: " + username + "\nPassword: " + password);
+
     let loginForm = document.getElementById("loginForm");
     let overlay = document.getElementById("overlay");
-    event.preventDefault();
+
     setTimeout(function () {
         loginForm.style.display = "none";
         overlay.style.display = "none";
-        loginForm.submit();
-    }, 100);
+    }, 1000); 
 });
 
+
+
 // chatgpt helped me create this log in form:)
+
+
 
 
 
@@ -53,7 +62,7 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
         Object.keys(data).forEach(decade => {
             Object.keys(data[decade]).forEach(movie => {
                 const awardWins = data[decade][movie]["award_wins"];
-                if (awardWins > 90) {
+                if (awardWins > 100) {
                     moviesWithOver30Wins.push({
                         title: data[decade][movie]["title"],
                         releaseDate: data[decade][movie]["release_date"],
@@ -116,8 +125,6 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
     .catch(error => console.error('Error fetching movie data:', error));
 
 
-
-
 // movies released in your birth year table
 function getMoviesByYear() {
     console.log("Function getMoviesByYear() called.");
@@ -152,3 +159,19 @@ function getMoviesByYear() {
         .catch(error => console.error('Error fetching movie data:', error));
 }
 
+function submitForm(event) {
+    event.preventDefault();
+
+    document.getElementById('carousel').scrollIntoView({ behavior: 'smooth' });
+
+}
+
+
+// Function to toggle between light and dark mode
+function toggleMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+// Event listener for the toggle mode button
+document.getElementById("toggleModeButton").addEventListener("click", toggleMode);
