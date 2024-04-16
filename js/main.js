@@ -125,8 +125,6 @@ fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
     .catch(error => console.error('Error fetching movie data:', error));
 
 
-
-
 // movies released in your birth year table
 function getMoviesByYear() {
     console.log("Function getMoviesByYear() called.");
@@ -161,13 +159,19 @@ function getMoviesByYear() {
         .catch(error => console.error('Error fetching movie data:', error));
 }
 
-
 function submitForm(event) {
-    // Prevent default form submission behavior
     event.preventDefault();
 
-    // Scroll to the carousel section
     document.getElementById('carousel').scrollIntoView({ behavior: 'smooth' });
 
-    // Additional logic to handle form submission
 }
+
+
+// Function to toggle between light and dark mode
+function toggleMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+// Event listener for the toggle mode button
+document.getElementById("toggleModeButton").addEventListener("click", toggleMode);
