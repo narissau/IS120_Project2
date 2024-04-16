@@ -41,21 +41,12 @@
             </div>
         </nav>
     </header>
-    <div id="loginForm" style="display: none;">
-        <form>
-            <div class="mb-3">
-                <label for="nameInput" class="form-label">Name</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
-            </div>
-            <div class="mb-3">
-                <label for="emailInput" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
-            </div>
-            <div class="mb-3">
-                <label for="passwordInput" class="form-label">Password</label>
-                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-secondary">Submit</button>
+    <div class="overlay" id="overlay"></div>
+    <div class="login-container">
+        <form id="loginForm">
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <button type="submit">Sign In</button>
         </form>
     </div>
 
@@ -236,13 +227,12 @@
                 <textarea class="form-control" id="eventSuggestion" rows="3" placeholder="Enter your event suggestions"></textarea>
             </div>
             
-            <!-- Email for Updates -->
             <div class="mb-3">
                 <label for="email" class="form-label">Email for Updates</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter your email">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </section>
