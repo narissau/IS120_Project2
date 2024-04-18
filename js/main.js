@@ -38,23 +38,12 @@ document.getElementById("toggleModeButton").addEventListener("click", toggleMode
 
 
 
-// fetch('https://qva0myalaa.execute-api.us-east-1.amazonaws.com/moviesData')
-//     .then(response => response.json())
-//     .then(data => {
-//         Object.keys(data).forEach(decade => {
+// window.onload = function () {
+//     var width = Math.round(window.screen.availWidth * 0.5);
+//     var height = Math.round(window.screen.availHeight * 0.5);
 
-//             Object.keys(data[decade]).forEach(movie => {
-
-//                 const movieData = data[decade][movie];
-
-//                 Object.keys(movieData).forEach(key => {
-//                     const value = movieData[key];
-//                     // console.log(`${key}:`, value);
-//                 });
-//             });
-//         });
-//     })
-//     .catch(error => console.error('Error fetching movie data:', error));
+//     window.resizeTo(width, height);
+// }
 
 
 // making a table of top award-winning movies
