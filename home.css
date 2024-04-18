@@ -186,7 +186,7 @@ p {
     padding: 5%;
     align-content: center;
     justify-content: center;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
 }
 
 
