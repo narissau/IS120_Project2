@@ -422,3 +422,30 @@ button:hover {
         transform: scale(1);
     }
 }
+
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+#myVideo {
+    width: 140vw;
+    height: 50vh;
+    position: relative;
+    object-fit: cover;
+}
+
+.bottom {
+    position: absolute;
+    right: 10vw;
+    top: 550vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Righteous";
+    font-size: 9em;
+}
