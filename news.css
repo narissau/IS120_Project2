@@ -161,7 +161,7 @@ main {
 }
 
 .events-container {
-    background-image: url(../svgs/Retro\ Ribbon\ 3.svg);
+    background-image: url(/svgs/Retro\ Ribbon\ 3.svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
