@@ -4,6 +4,16 @@
     --tertiary: #68c7c1;
 }
 
+.dark-mode {
+    --primary: #794a3a !important;
+    --secondary: #faca78 !important;
+    --tertiary: #e6d9a7 !important;
+}
+
+.dark {
+    background-color: var(--secondary);
+}
+
 .navbar {
     background-color: var(--secondary);
     font-family: "Righteous";
@@ -17,11 +27,16 @@
     padding: 5px;
 }
 
+#toggleModeButton {
+    position: absolute;
+    right: 0px;
+    top: 45px;
+}
+
 .navbar button:hover {
     background-color: var(--secondary);
     color: var(--primary);
 }
-
 
 .navbar-brand {
     color: var(--primary);
@@ -78,7 +93,7 @@ main {
 
 @keyframes spotlight {
     0% {
-        background-color: var(--primary);
+        background-color: var(--secondary);
     }
 
     33% {
@@ -90,7 +105,7 @@ main {
     }
 
     100% {
-        background-color: var(--primary);
+        background-color: var(--secondary);
     }
 }
 
@@ -100,7 +115,7 @@ main {
     }
 
     33% {
-        background-color: var(--primary);
+        background-color: var(--secondary);
     }
 
     66% {
@@ -122,7 +137,7 @@ main {
     }
 
     66% {
-        background-color: var(--primary);
+        background-color: var(--secondary);
     }
 
     100% {
@@ -172,7 +187,7 @@ div span {
     font-family: "Righteous";
     font-size: 1em;
     margin-left: 30px;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .input-group {
@@ -191,20 +206,33 @@ div span {
 
 h3 {
     font-family: "Righteous";
-    color: var(--secondary);
+    color: var(--primary);
     font-size: 4rem;
+    background-color: var(--secondary);
+    border-radius: .5em;
+    padding: 5px;
+    border: solid var(--primary) 5px;
 }
 
 h4 {
     font-family: "Righteous";
-    color: var(--secondary);
+    color: var(--primary);
     font-size: 2rem;
+    background-color: var(--secondary);
+    border-radius: .5em;
+    padding: 5px;
+    border: solid var(--primary) 5px;
 }
 
 .btn {
     margin: 10px;
     width: 50%;
     align-self: flex-start;
+}
+
+.search-container {
+    background-color: var(--secondary);
+    width: 40%;
 }
 
 .container {

@@ -77,6 +77,13 @@ function searchGenres (movies, genreInput) {
     return genremovies;
 }
 
+function toggleMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+document.getElementById("toggleModeButton").addEventListener("click", toggleMode);
+
 // This was meant to be the JS that handled the buttons
 
 // document.getElementById("prevButton").addEventListener("click", () => {
