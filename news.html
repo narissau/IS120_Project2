@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,94 +18,117 @@
         href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
         rel="stylesheet">
 
+    <link rel="icon" href="images/Photo-And-Video-WordPress-Site-Icon.png" type="image/svg+xml">
+
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="news.css">
+
+    <script defer src="../js/news.js"></script>
 </head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand">Movie National Collective</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="../html/index.html">Home</a>
-                    <a class="nav-link active" href="#news">Movie Finder</a>
+
+<body class="dark">
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand">Movie National Collective</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" href="#news">Movie Finder</a>
+                        <button class="nav-link ms-auto" id="toggleModeButton">Click here to switch between dark/light
+                            mode</button>
+                    </div>
                 </div>
-                <button class="nav-link ms-auto" id="loginButton">Log In / Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="headline-container">
+            <div class="bg-container">
+                <div class="box box-1">Lights</div>
+                <div class="box box-2">Camera</div>
+                <div class="box box-3">Action</div>
             </div>
         </div>
-    </nav>
-</header>
+        <div class="posters">
+            <img src="../images/movie-poster-1.avif" alt="movie poster">
+            <img src="../images/movie poster.avif" alt="movie poster">
+            <img src="../images/movie poster 3.avif" alt="movie poster">
+            <img src="../images/movie poster 4.avif" alt="movie poster">
+            <img src="../images/movie poster 5.avif" alt="movie poster">
+        </div>
+        <div class="events-container row">
+            <section class="left-section col-4">
+                <h3>Let's Find A Film!</h3>
+                <h4>Search By:</h4>
+                <br>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Decade</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected value="">Choose...</option>
+                        <option value="80s">1980's</option>
+                        <option value="90s">1990's</option>
+                        <option value="00s">2000's</option>
+                        <option value="10s">2010's</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Genre</label>
+                    <select class="form-select" id="inputGroupSelect02">
+                        <option selected value="">Choose...</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Family">Family</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="History">History</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Thriller">Thriller</option>
+                    </select>
+                </div>
 
-<main>
-<div class="headline-container">
-    <div class="bg-container">
-            <div class="box box-1">Lights</div>
-            <div class="box box-2">Camera</div>
-            <div class="box box-3">Action</div>
-    </div>
-</div>
-<div class="events-container">
+                <button type="button" class="btn btn-secondary" onclick="movieSearch()">Search Away!</button>
+            </section>
+            <section class="right-section col" id="right-section">
+                <div class="grid-item movie-box"><span>Movie Title:</span></div>
+                <div class="grid-item" id="movieResponse"> </div>
+                <div class="grid-item release-box"><span>Year of Release:</span></div>
+                <div class="grid-item" id="yearResponse"> </div>
+                <div class="grid-item plot-box"><span>Plot:</span></div>
+                <div class="grid-item" id="plotResponse"> </div>
+                <!-- In a perfect world, the following buttons would have allowed users
+            to cycle through the recommended movies, but my mortal mind could not 
+            design a solution that actually worked. One day:) -->
+                <!-- <button type="button" id="prevButton" class="btn btn-secondary">Previous</button>
+    <button type="button" id="nextButton" class="btn btn-secondary">Next</button> -->
+            </section>
+        </div>
 
-<section class="left-section col-4">
-    <h3>Let's Find A Film!</h3>
-    <h4>Search By:</h4>
-<br>
-    <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupSelect01">Decade</label>
-        <select class="form-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="1">1980's</option>
-            <option value="2">1990's</option>
-            <option value="3">2000's</option>
-            <option value="3">2010's</option>
-        </select>
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupSelect01">Genre</label>
-        <select class="form-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="3">Action</option>
-            <option value="1">Adventure</option>
-            <option value="3">Animation</option>
-            <option value="3">Biography</option>
-            <option value="2">Comedy</option>
-            <option value="3">Crime</option>
-            <option value="3">Documentary</option>
-            <option value="3">Drama</option>
-            <option value="3">Family</option>
-            <option value="3">Fantasy</option>
-            <option value="3">History</option>
-            <option value="3">Horror</option>
-            <option value="3">Musical</option>
-            <option value="3">Mystery</option>
-            <option value="3">Romance</option>
-            <option value="3">Sci-Fi</option>
-            <option value="3">Sport</option>
-            <option value="3">Thriller</option>
-        </select>
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Actor</span>
-        <input type="text" class="form-control" placeholder="First or Last Name" aria-label="First or Last Name"
-            aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Movie Title</span>
-        <input type="text" class="form-control" placeholder="Title" aria-label="Title"
-            aria-describedby="basic-addon1">
-    </div>
-</section>
+        <div class="video-container">
+            <video autoplay muted loop id="myVideo">
+                <source src="../TV Static.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
 
-<section class="right-section col"></section>
-</div>
+    <section class="bottom">Cinema Awaits...</section>
+</body>
 
-<section class="randomizer">
-<h3>Still Can't Decide?</h3>
-<button class="btn random" onclick="randomizer()">Randomize!</button>
-</section>
-</main>
+</html>
